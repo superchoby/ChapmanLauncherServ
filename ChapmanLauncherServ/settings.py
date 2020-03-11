@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #own apps
     'games.apps.GamesConfig',
+    'professor.apps.ProfessorConfig',
     #third party
     'rest_framework',
 ]
@@ -123,3 +124,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'professor.User'

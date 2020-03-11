@@ -6,8 +6,9 @@ class GameSerializer(serializers.ModelSerializer):
         model = Game
         fields = [
             'id',
-            'name', 
+            'title', 
             'studentNames', 
+            'genres',
             'studentIds', 
             'build', 
             'hasBeenApproved'

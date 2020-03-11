@@ -3,11 +3,8 @@ from games.serializers import GameSerializer
 from rest_framework import mixins
 from rest_framework import generics
 from rest_framework.response import Response
-from django.conf import settings
-from django.core.files import File
 from rest_framework.views import APIView
-from django.http import HttpResponse, FileResponse
-from django.utils.encoding import smart_str
+from django.http import FileResponse
 
 class GameList(mixins.CreateModelMixin, 
             mixins.ListModelMixin,
