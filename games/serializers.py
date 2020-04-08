@@ -7,12 +7,11 @@ class GameSerializer(serializers.ModelSerializer):
         fields = [
             'id',
             'title', 
-            'studentNames', 
+            'developers', 
             'genres',
             'description',
             'studentIds', 
             'build', 
-            'hasBeenApproved'
         ]
     #     title = models.CharField(max_length=50, unique=True)
     # studentNames = models.CharField(max_length=80)

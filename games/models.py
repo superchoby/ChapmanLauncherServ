@@ -4,7 +4,7 @@ from datetime import date
 # Create your models here.
 class Game(models.Model):
     title = models.CharField(max_length=50, unique=True)
-    studentNames = models.CharField(max_length=80)
+    developers = models.CharField(max_length=80)
     genres = models.CharField(max_length=128)
     studentIds = models.CharField(max_length=60)
     description = models.CharField(max_length=128)
