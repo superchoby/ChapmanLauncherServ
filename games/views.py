@@ -33,3 +33,16 @@ class GameDetail(APIView):
         response = FileResponse(zip_file, content_type='application/orce-download')
         response['Content-Disposition'] = 'attachment; filename=name.zip'
         return response
+
+    def post(self, request, *args, **kwargs):
+        game = self.get_object(kwargs['pk'])
+        serializer = GameSerializer(game)
+        if self.request.data['approved']:
+            game.hasBeenApproved = True
+            game.save()
+        else:
+            game.delete()
+
+        return Response(serializer.data)
+        # emp.name = 'Somename'
+        # emp.save()

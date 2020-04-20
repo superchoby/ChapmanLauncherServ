@@ -11,6 +11,7 @@ class GameSerializer(serializers.ModelSerializer):
             'genres',
             'description',
             'studentIds', 
+            'hasBeenApproved',
             'build', 
         ]
     #     title = models.CharField(max_length=50, unique=True)
